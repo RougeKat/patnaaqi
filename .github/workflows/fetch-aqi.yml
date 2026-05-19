@@ -10,6 +10,8 @@ on:
 jobs:
   fetch-and-commit:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     permissions:
       contents: write   # needed to push the updated JSON
 
@@ -20,7 +22,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '24'
 
       - name: Fetch AQI data from WAQI + Open-Meteo
         env:
