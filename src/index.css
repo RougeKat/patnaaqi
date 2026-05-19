@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-aqi-good: #22C55E;
+  --color-aqi-satisfactory: #EAB308;
+  --color-aqi-moderate: #F97316;
+  --color-aqi-poor: #EF4444;
+  --color-aqi-very-poor: #A855F7;
+  --color-aqi-severe: #7F1D1D;
+
+  --color-bg-light: #F7F9FC;
+  --color-surface-light: #FFFFFF;
+  --color-surface-secondary-light: #EEF2F7;
+  --color-text-primary-light: #111827;
+  --color-text-secondary-light: #6B7280;
+  --color-border-light: #E5E7EB;
+  --color-accent-light: #0EA5E9;
+
+  --color-bg-dark: #0F172A;
+  --color-surface-dark: #111827;
+  --color-surface-secondary-dark: #1E293B;
+  --color-text-primary-dark: #F8FAFC;
+  --color-text-secondary-dark: #94A3B8;
+  --color-border-dark: #334155;
+  --color-accent-dark: #38BDF8;
+
+  --font-inter: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--color-bg-light)] text-[var(--color-text-primary-light)] font-inter antialiased transition-colors duration-200;
+  }
+
+  .dark body {
+    @apply bg-[var(--color-bg-dark)] text-[var(--color-text-primary-dark)];
+  }
+}
