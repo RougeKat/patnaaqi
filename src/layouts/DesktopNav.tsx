@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import ThemeToggle from '../components/ThemeToggle';
+import patnaaqiLogo from '/patnaaqi_logo.png';
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -18,7 +19,7 @@ export default function DesktopNav() {
   return (
     <header className="hidden md:flex items-center justify-between px-8 py-4 bg-[var(--color-surface-light)] dark:bg-[var(--color-surface-dark)] border-b border-[var(--color-border-light)] dark:border-[var(--color-border-dark)] sticky top-0 z-50">
       <div className="flex items-center cursor-default">
-        <img src="/patnaaqi_logo.png" alt="PatnaAQI Logo" className="h-8 object-contain" />
+        <img src={patnaaqiLogo} alt="PatnaAQI Logo" className="h-8 object-contain" />
       </div>
       
       <nav className="flex items-center gap-6">

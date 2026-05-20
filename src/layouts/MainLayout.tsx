@@ -2,6 +2,7 @@ import { Outlet } from 'react-router-dom';
 import DesktopNav from './DesktopNav';
 import MobileNav from './MobileNav';
 import ThemeToggle from '../components/ThemeToggle';
+import patnaaqiLogo from '/patnaaqi_logo.png';
 
 export default function MainLayout() {
   return (
@@ -11,7 +12,7 @@ export default function MainLayout() {
       {/* Mobile Top Header */}
       <header className="md:hidden flex items-center justify-between px-4 py-3 bg-[var(--color-surface-light)] dark:bg-[var(--color-surface-dark)] border-b border-[var(--color-border-light)] dark:border-[var(--color-border-dark)] sticky top-0 z-40">
         <div className="flex items-center cursor-default">
-          <img src="/patnaaqi_logo.png" alt="PatnaAQI Logo" className="h-7 object-contain" />
+          <img src={patnaaqiLogo} alt="PatnaAQI Logo" className="h-7 object-contain" />
         </div>
         <ThemeToggle />
       </header>
