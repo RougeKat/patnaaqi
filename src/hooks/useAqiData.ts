@@ -19,7 +19,7 @@ export function useAqiData(): UseAqiDataResult {
   useEffect(() => {
     let cancelled = false;
 
-    const dataUrl = `${import.meta.env.BASE_URL}data/aqi.json`;
+    const dataUrl = `${import.meta.env.BASE_URL}data/aqi.json?t=${Date.now()}`;
 
     fetch(dataUrl)
       .then((res) => {
