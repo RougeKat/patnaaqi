@@ -24,9 +24,9 @@ export function formatNextUpdate(isoString: string): string {
   const diffMins = Math.ceil(diffMs / 60_000);
 
   if (diffMins <= 0) return 'soon';
-  if (diffMins < 60) return `${diffMins}m`;
+  if (diffMins < 60) return `in ${diffMins}m`;
 
   const hours = Math.floor(diffMins / 60);
   const mins = diffMins % 60;
-  return mins > 0 ? `${hours}h ${mins}m` : `${hours}h`;
+  return mins > 0 ? `in ${hours}h ${mins}m` : `in ${hours}h`;
 }
