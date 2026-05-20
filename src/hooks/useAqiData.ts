@@ -19,7 +19,9 @@ export function useAqiData(): UseAqiDataResult {
   useEffect(() => {
     let cancelled = false;
 
-    fetch('/data/aqi.json')
+    const dataUrl = `${import.meta.env.BASE_URL}data/aqi.json`;
+
+    fetch(dataUrl)
       .then((res) => {
         if (!res.ok) throw new Error(`Failed to load data (HTTP ${res.status})`);
         return res.json() as Promise<AqiData>;
