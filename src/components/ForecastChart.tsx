@@ -148,7 +148,7 @@ export default function ForecastChart({ hourlyData }: ForecastChartProps) {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
         <div>
           <h3 className="text-lg font-bold text-[var(--color-text-primary-light)] dark:text-[var(--color-text-primary-dark)]">
-            48-Hour Forecast
+            24-Hour Forecast
           </h3>
           <p className="text-sm text-[var(--color-text-secondary-light)] dark:text-[var(--color-text-secondary-dark)] mt-1">
             Predicted concentrations in micrograms (µg/m³) or milligrams (mg/m³) per cubic meter

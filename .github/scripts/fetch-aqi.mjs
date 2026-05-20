@@ -166,8 +166,9 @@ async function main() {
             ? +(meteo.hourly.carbon_monoxide[i] / 1000).toFixed(2)
             : null,
     }))
-    // Only keep hours from current hour onward (skip past hours)
-    .filter(h => h.time >= nowIso.replace('T', 'T').slice(0, 13));
+    // Only keep hours from current hour onward (skip past hours), limited to the next 24 hours
+    .filter(h => h.time >= nowIso.replace('T', 'T').slice(0, 13))
+    .slice(0, 24);
 
   // ── Assemble final JSON
   const output = {
