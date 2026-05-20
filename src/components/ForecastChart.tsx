@@ -80,8 +80,10 @@ const pollutantTabs = [
 export default function ForecastChart({ hourlyData }: ForecastChartProps) {
   const [selectedPollutant, setSelectedPollutant] = useState<string>('pm25');
 
-  // Slice the data to exactly 24 hours to enforce client-side visual limits
-  const displayData = hourlyData.slice(0, 24);
+  // Skip the first hour (current update hour) and take the next 24 hours
+  const displayData = hourlyData.length > 24
+    ? hourlyData.slice(1, 25)
+    : hourlyData.slice(0, 24);
 
   // Format the time labels on the X-axis
   const formatXAxis = (isoString: string, index: number) => {
