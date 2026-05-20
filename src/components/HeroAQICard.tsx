@@ -25,14 +25,21 @@ export default function HeroAQICard({ aqi, updatedAt, nextUpdateIn, pollutants }
       <div className="relative z-10 flex flex-col w-full">
         
         {/* Top Header: Timestamps */}
-        <div className="flex flex-col items-start w-full mb-2">
-          <div className="flex items-center gap-2 text-sm md:text-base font-semibold text-[var(--color-text-primary-light)] dark:text-[var(--color-text-primary-dark)]">
-            <span>Updated {updatedAt}</span>
-            <Clock size={16} className="text-[var(--color-text-secondary-light)] dark:text-[var(--color-text-secondary-dark)]" />
-          </div>
-          <span className={`text-sm md:text-base font-bold mt-1 ${colorClass}`}>
-            Updates hourly • Next update {nextUpdateIn}
+        <div className="flex items-center flex-wrap gap-2 text-sm md:text-base font-medium text-[var(--color-text-secondary-light)] dark:text-[var(--color-text-secondary-dark)] mb-3">
+          <Clock size={16} />
+          <span>Updates hourly</span>
+          <span>•</span>
+          <span className="text-[var(--color-text-primary-light)] dark:text-[var(--color-text-primary-dark)] font-semibold">
+            Updated {updatedAt}
           </span>
+          {nextUpdateIn === 'soon' && (
+            <>
+              <span>•</span>
+              <span className={`font-bold ${colorClass}`}>
+                Next update soon
+              </span>
+            </>
+          )}
         </div>
 
         {/* Hero AQI Section */}
