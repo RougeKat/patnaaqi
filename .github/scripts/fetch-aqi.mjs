@@ -170,7 +170,7 @@ async function main() {
     }))
     // Only keep hours from current hour onward (skip past hours), limited to the next 24 hours
     .filter(h => h.time.slice(0, 13) >= nowIso)
-    .slice(0, 24);
+    .slice(0, 30);
 
   // ── Assemble final JSON
   const output = {
