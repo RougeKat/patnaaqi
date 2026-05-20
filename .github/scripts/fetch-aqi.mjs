@@ -13,7 +13,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const PATNA_LAT = 25.5941;
 const PATNA_LON = 85.1376;
-const UPDATE_INTERVAL_MINUTES = 30;
+const UPDATE_INTERVAL_MINUTES = 60;
 
 const WAQI_TOKEN = process.env.WAQI_TOKEN;
 if (!WAQI_TOKEN) {
