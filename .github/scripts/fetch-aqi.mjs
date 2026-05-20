@@ -153,7 +153,9 @@ async function main() {
 
   // ── Build forecast array (next 48 hours from now)
   const times  = meteo.hourly.time;
-  const nowIso = now.toISOString().slice(0, 13); // "2026-05-19T17"
+  // Shift to India Standard Time (UTC+5:30) to generate correct local ISO string for comparison with Open-Meteo times
+  const localTime = new Date(now.getTime() + 5.5 * 60 * 60 * 1000);
+  const nowIso = localTime.toISOString().slice(0, 13);
   const hourly = times
     .map((t, i) => ({
       time: t,
