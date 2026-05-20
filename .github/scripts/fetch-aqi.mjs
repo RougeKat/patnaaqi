@@ -103,7 +103,7 @@ async function fetchOpenMeteo() {
     latitude: String(PATNA_LAT),
     longitude: String(PATNA_LON),
     current: 'pm10,pm2_5,nitrogen_dioxide,sulphur_dioxide,carbon_monoxide,ozone',
-    hourly: 'pm10,pm2_5,nitrogen_dioxide,ozone',
+    hourly: 'pm10,pm2_5,carbon_monoxide,nitrogen_dioxide,sulphur_dioxide,ozone',
     timezone: 'Asia/Kolkata',
     forecast_days: '2',
   });
@@ -161,6 +161,10 @@ async function main() {
       pm10: meteo.hourly.pm10[i] ?? null,
       no2:  meteo.hourly.nitrogen_dioxide[i] ?? null,
       o3:   meteo.hourly.ozone[i] ?? null,
+      so2:  meteo.hourly.sulphur_dioxide[i] ?? null,
+      co:   meteo.hourly.carbon_monoxide[i] !== undefined && meteo.hourly.carbon_monoxide[i] !== null
+            ? +(meteo.hourly.carbon_monoxide[i] / 1000).toFixed(2)
+            : null,
     }))
     // Only keep hours from current hour onward (skip past hours)
     .filter(h => h.time >= nowIso.replace('T', 'T').slice(0, 13));

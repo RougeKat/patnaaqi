@@ -37,6 +37,22 @@ function getPollutantCategory(pollutant: string, value: number): string {
     if (value <= 400) return 'Very Poor';
     return 'Severe';
   }
+  if (pollutant === 'so2') {
+    if (value <= 40) return 'Good';
+    if (value <= 80) return 'Satisfactory';
+    if (value <= 380) return 'Moderate';
+    if (value <= 800) return 'Poor';
+    if (value <= 1600) return 'Very Poor';
+    return 'Severe';
+  }
+  if (pollutant === 'co') {
+    if (value <= 1) return 'Good';
+    if (value <= 2) return 'Satisfactory';
+    if (value <= 10) return 'Moderate';
+    if (value <= 17) return 'Poor';
+    if (value <= 34) return 'Very Poor';
+    return 'Severe';
+  }
   if (pollutant === 'o3') {
     if (value <= 50) return 'Good';
     if (value <= 100) return 'Satisfactory';
@@ -56,6 +72,8 @@ const pollutantTabs = [
   { id: 'pm25', name: 'PM2.5', label: 'PM2.5' },
   { id: 'pm10', name: 'PM10', label: 'PM10' },
   { id: 'no2', name: 'no2', label: 'NO₂' },
+  { id: 'so2', name: 'so2', label: 'SO₂' },
+  { id: 'co', name: 'co', label: 'CO' },
   { id: 'o3', name: 'o3', label: 'O₃' },
 ];
 
@@ -112,7 +130,7 @@ export default function ForecastChart({ hourlyData }: ForecastChartProps) {
                 Predicted level
               </span>
               <span className="text-[20px] font-extrabold text-[var(--color-text-primary-light)] dark:text-[var(--color-text-primary-dark)]">
-                {value} <span className="text-xs font-normal">µg/m³</span>
+                {value} <span className="text-xs font-normal">{selectedPollutant === 'co' ? 'mg/m³' : 'µg/m³'}</span>
               </span>
             </div>
             <div className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${categoryColorClass} ${categoryBgClass}`}>
@@ -133,7 +151,7 @@ export default function ForecastChart({ hourlyData }: ForecastChartProps) {
             48-Hour Forecast
           </h3>
           <p className="text-sm text-[var(--color-text-secondary-light)] dark:text-[var(--color-text-secondary-dark)] mt-1">
-            Predicted concentrations in micrograms per cubic meter (µg/m³)
+            Predicted concentrations in micrograms (µg/m³) or milligrams (mg/m³) per cubic meter
           </p>
         </div>
 

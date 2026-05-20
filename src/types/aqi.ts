@@ -29,6 +29,8 @@ export interface ForecastHour {
   pm10: number | null;
   no2: number | null;
   o3: number | null;
+  so2: number | null;
+  co: number | null;
 }
 
 export interface ForecastData {
