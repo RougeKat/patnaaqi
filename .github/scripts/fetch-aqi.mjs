@@ -158,7 +158,7 @@ async function main() {
   const nowIso = localTime.toISOString().slice(0, 13);
   const hourly = times
     .map((t, i) => ({
-      time: t,
+      time: t + '+05:30', // Append the Kolkata offset to make it a fully qualified ISO 8601 string
       pm25: meteo.hourly.pm2_5[i] ?? null,
       pm10: meteo.hourly.pm10[i] ?? null,
       no2:  meteo.hourly.nitrogen_dioxide[i] ?? null,
@@ -169,7 +169,7 @@ async function main() {
             : null,
     }))
     // Only keep hours from current hour onward (skip past hours), limited to the next 24 hours
-    .filter(h => h.time >= nowIso.replace('T', 'T').slice(0, 13))
+    .filter(h => h.time.slice(0, 13) >= nowIso)
     .slice(0, 24);
 
   // ── Assemble final JSON
