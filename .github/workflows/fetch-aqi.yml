@@ -2,8 +2,8 @@ name: Fetch AQI Data
 
 on:
   schedule:
-    # Runs every 1 hour
-    - cron: '0 * * * *'
+    # Runs hourly at the top of the hour in IST (UTC+5:30)
+    - cron: '30 * * * *'
   workflow_dispatch:
     # Allows manual trigger from the GitHub Actions UI
 
