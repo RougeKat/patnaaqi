@@ -80,6 +80,9 @@ const pollutantTabs = [
 export default function ForecastChart({ hourlyData }: ForecastChartProps) {
   const [selectedPollutant, setSelectedPollutant] = useState<string>('pm25');
 
+  // Slice the data to exactly 24 hours to enforce client-side visual limits
+  const displayData = hourlyData.slice(0, 24);
+
   // Format the time labels on the X-axis
   const formatXAxis = (isoString: string, index: number) => {
     try {
@@ -177,7 +180,7 @@ export default function ForecastChart({ hourlyData }: ForecastChartProps) {
       <div className="w-full h-[320px] -ml-2 text-[var(--color-text-secondary-light)] dark:text-[var(--color-text-secondary-dark)]">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart
-            data={hourlyData}
+            data={displayData}
             margin={{ top: 10, right: 10, left: -20, bottom: 0 }}
           >
             <defs>
