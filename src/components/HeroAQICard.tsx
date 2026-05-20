@@ -31,7 +31,7 @@ export default function HeroAQICard({ aqi, updatedAt, nextUpdateIn, pollutants }
             <Clock size={16} className="text-[var(--color-text-secondary-light)] dark:text-[var(--color-text-secondary-dark)] shrink-0" />
           </div>
           <span className={`text-xs md:text-sm font-bold mt-0.5 ${colorClass}`}>
-            Next update {nextUpdateIn}
+            {nextUpdateIn === 'soon' ? 'Next update soon' : 'Updates hourly'}
           </span>
         </div>
 
