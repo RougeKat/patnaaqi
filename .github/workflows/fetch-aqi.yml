@@ -38,7 +38,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to aqi.json — skipping commit."
           else
-            git commit -m "chore: update aqi.json [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+            git commit -m "chore: Live AQI Data Updated [$(TZ='Asia/Kolkata' date '+%Y-%m-%d %I:%M %p IST')]"
             git push
           fi
 
@@ -58,6 +58,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No data changes to push to gh-pages."
           else
-            git commit -m "chore: sync aqi.json data [skip ci]"
+            git commit -m "chore: Live AQI Data Updated (gh-pages) [skip ci] [$(TZ='Asia/Kolkata' date '+%Y-%m-%d %I:%M %p IST')]"
             git push
           fi
