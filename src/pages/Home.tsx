@@ -2,6 +2,7 @@ import { useAqiData } from '../hooks/useAqiData';
 import { formatRelativeTime, formatNextUpdate } from '../lib/time';
 import HeroAQICard from '../components/HeroAQICard';
 import HeroSkeleton from '../components/HeroSkeleton';
+import ForecastChart from '../components/ForecastChart';
 import type { PollutantData } from '../components/PollutantCard';
 
 export default function Home() {
@@ -51,7 +52,8 @@ export default function Home() {
         pollutants={pollutants}
       />
 
-      {/* Future homepage sections go here */}
+      {/* 48-Hour Forecast Chart */}
+      <ForecastChart hourlyData={data.forecast.hourly} />
     </div>
   );
 }
