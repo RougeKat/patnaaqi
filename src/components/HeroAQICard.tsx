@@ -24,50 +24,78 @@ export default function HeroAQICard({ aqi, updatedAt, nextUpdateIn, pollutants }
 
       <div className="relative z-10 flex flex-col w-full">
 
-        {/* ── Two-column hero row (stacks on mobile, side-by-side on md+) ── */}
-        <div className="flex flex-col md:flex-row md:items-stretch gap-6 md:gap-8 w-full">
+        {/* ══ MOBILE layout (hidden on md+) ══
+            Order: timestamps → AQI number → scale bar → advisory */}
+        <div className="flex flex-col gap-4 md:hidden">
 
-          {/* ── LEFT column on desktop / BOTTOM on mobile: timestamps, advisory, scale bar ── */}
-          <div className="flex flex-col flex-1 min-w-0 order-2 md:order-1 gap-0">
+          {/* 1. Timestamps */}
+          <div className="flex flex-col items-start">
+            <div className="flex items-center gap-1.5 text-sm font-semibold text-[var(--color-text-primary-light)] dark:text-[var(--color-text-primary-dark)]">
+              <span>Updated {updatedAt}</span>
+              <Clock size={16} className="text-[var(--color-text-secondary-light)] dark:text-[var(--color-text-secondary-dark)] shrink-0" />
+            </div>
+            <span className={`text-xs font-bold mt-0.5 ${colorClass}`}>
+              {nextUpdateIn === 'soon' ? 'Next update soon' : 'Updates hourly'}
+            </span>
+          </div>
 
-            {/* Timestamps — always first on both mobile and desktop */}
-            <div className="flex flex-col items-start order-1 mb-3 md:mb-4">
-              <div className="flex items-center gap-1.5 text-sm md:text-base font-semibold text-[var(--color-text-primary-light)] dark:text-[var(--color-text-primary-dark)]">
+          {/* 2. AQI number + badge */}
+          <div className="flex flex-col items-center gap-3 py-2">
+            <span className={`text-[100px] font-black tracking-tighter leading-none ${colorClass}`} style={{ textShadow: '0 0 60px currentColor' }}>
+              {aqi}
+            </span>
+            <div className={`px-5 py-2 rounded-full text-lg font-bold uppercase tracking-wider ${colorClass} ${bgClass}`}>
+              {category}
+            </div>
+          </div>
+
+          {/* 3. Scale bar */}
+          <AqiScaleBar currentAqi={aqi} />
+
+          {/* 4. Advisory */}
+          <p className="text-base font-medium text-[var(--color-text-primary-light)] dark:text-[var(--color-text-primary-dark)] leading-relaxed">
+            {advisory}
+          </p>
+
+        </div>
+
+        {/* ══ DESKTOP layout (hidden below md) ══
+            Two columns: left (timestamps + advisory + scale bar) | right (AQI number) */}
+        <div className="hidden md:flex md:flex-row md:items-stretch gap-8 w-full">
+
+          {/* Left column */}
+          <div className="flex flex-col flex-1 min-w-0">
+            <div className="flex flex-col items-start mb-4">
+              <div className="flex items-center gap-1.5 text-base font-semibold text-[var(--color-text-primary-light)] dark:text-[var(--color-text-primary-dark)]">
                 <span>Updated {updatedAt}</span>
                 <Clock size={16} className="text-[var(--color-text-secondary-light)] dark:text-[var(--color-text-secondary-dark)] shrink-0" />
               </div>
-              <span className={`text-xs md:text-sm font-bold mt-0.5 ${colorClass}`}>
+              <span className={`text-sm font-bold mt-0.5 ${colorClass}`}>
                 {nextUpdateIn === 'soon' ? 'Next update soon' : 'Updates hourly'}
               </span>
             </div>
-
-            {/* Scale Bar — second on mobile, last on desktop */}
-            <div className="order-2 md:order-3">
-              <AqiScaleBar currentAqi={aqi} />
-            </div>
-
-            {/* Advisory Text — last on mobile, second on desktop */}
-            <p className="order-3 md:order-2 text-base md:text-lg font-medium text-[var(--color-text-primary-light)] dark:text-[var(--color-text-primary-dark)] leading-relaxed md:flex-1 mt-3 md:mt-0">
+            <p className="text-lg font-medium text-[var(--color-text-primary-light)] dark:text-[var(--color-text-primary-dark)] leading-relaxed flex-1">
               {advisory}
             </p>
+            <AqiScaleBar currentAqi={aqi} />
           </div>
 
-          {/* ── Divider (visible on desktop only, hidden on mobile) ── */}
-          <div className="hidden md:block w-px self-stretch bg-[var(--color-border-light)] dark:bg-[var(--color-border-dark)] opacity-60 shrink-0" />
+          {/* Vertical divider */}
+          <div className="w-px self-stretch bg-[var(--color-border-light)] dark:bg-[var(--color-border-dark)] opacity-60 shrink-0" />
 
-          {/* ── RIGHT column on desktop / TOP on mobile: giant AQI number + badge ── */}
-          <div className="flex flex-col items-center justify-center gap-4 order-1 md:order-2 md:min-w-[220px] md:px-4">
-            <span className={`text-[96px] md:text-[130px] font-black tracking-tighter leading-none ${colorClass}`} style={{ textShadow: '0 0 60px currentColor' }}>
+          {/* Right column */}
+          <div className="flex flex-col items-center justify-center gap-4 min-w-[220px] px-4">
+            <span className={`text-[130px] font-black tracking-tighter leading-none ${colorClass}`} style={{ textShadow: '0 0 60px currentColor' }}>
               {aqi}
             </span>
-            <div className={`px-5 py-2 md:px-6 md:py-2.5 rounded-full text-lg md:text-xl font-bold uppercase tracking-wider ${colorClass} ${bgClass}`}>
+            <div className={`px-6 py-2.5 rounded-full text-xl font-bold uppercase tracking-wider ${colorClass} ${bgClass}`}>
               {category}
             </div>
           </div>
 
         </div>
 
-        {/* ── Pollutants Grid (full width, below both columns) ── */}
+        {/* ── Pollutants Grid — full width on both layouts ── */}
         <div className="mt-8 md:mt-10 grid grid-cols-2 md:grid-cols-6 gap-3 md:gap-4 w-full">
           {pollutants.map((pollutant) => (
             <PollutantCard key={pollutant.id} data={pollutant} />
