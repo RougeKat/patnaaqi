@@ -1,9 +1,13 @@
+import { lazy, Suspense } from 'react';
 import { useAqiData } from '../hooks/useAqiData';
 import { formatRelativeTime, formatNextUpdate } from '../lib/time';
 import HeroAQICard from '../components/HeroAQICard';
 import HeroSkeleton from '../components/HeroSkeleton';
-import ForecastChart from '../components/ForecastChart';
 import type { PollutantData } from '../components/PollutantCard';
+
+// Lazy-load ForecastChart — Recharts is heavy (~180KB) and always below the fold.
+// This defers its download until after the hero card is interactive.
+const ForecastChart = lazy(() => import('../components/ForecastChart'));
 
 export default function Home() {
   const { data, loading, error } = useAqiData();
@@ -52,8 +56,12 @@ export default function Home() {
         pollutants={pollutants}
       />
 
-      {/* 48-Hour Forecast Chart */}
-      <ForecastChart hourlyData={data.forecast.hourly} />
+      {/* Forecast Chart — lazy loaded after hero is visible */}
+      <Suspense fallback={
+        <div className="rounded-[24px] h-[420px] animate-pulse bg-[var(--color-surface-light)] dark:bg-[var(--color-surface-dark)] border border-[var(--color-border-light)] dark:border-[var(--color-border-dark)]" />
+      }>
+        <ForecastChart hourlyData={data.forecast.hourly} />
+      </Suspense>
     </div>
   );
 }
