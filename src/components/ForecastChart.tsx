@@ -158,21 +158,23 @@ export default function ForecastChart({ hourlyData }: ForecastChartProps) {
           </p>
         </div>
 
-        {/* Tab Selectors */}
-        <div className="flex items-center bg-[var(--color-surface-secondary-light)] dark:bg-[var(--color-surface-secondary-dark)] p-1 rounded-xl self-start md:self-auto border border-[var(--color-border-light)] dark:border-[var(--color-border-dark)]/50">
-          {pollutantTabs.map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setSelectedPollutant(tab.id)}
-              className={`px-4 py-1.5 rounded-lg text-xs font-bold tracking-wide transition-all cursor-pointer ${
-                selectedPollutant === tab.id
-                  ? 'bg-[var(--color-surface-light)] dark:bg-[var(--color-surface-dark)] text-[var(--color-accent-light)] dark:text-[var(--color-accent-dark)] shadow-sm'
-                  : 'text-[var(--color-text-secondary-light)] dark:text-[var(--color-text-secondary-dark)] hover:text-[var(--color-text-primary-light)] dark:hover:text-[var(--color-text-primary-dark)]'
-              }`}
-            >
-              {tab.label}
-            </button>
-          ))}
+        {/* Tab Selectors — scrollable on mobile so they never overflow */}
+        <div className="overflow-x-auto pb-1 -mb-1 self-start md:self-auto">
+          <div className="flex items-center bg-[var(--color-surface-secondary-light)] dark:bg-[var(--color-surface-secondary-dark)] p-1 rounded-xl border border-[var(--color-border-light)] dark:border-[var(--color-border-dark)]/50 min-w-max">
+            {pollutantTabs.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setSelectedPollutant(tab.id)}
+                className={`px-2.5 py-1.5 md:px-4 rounded-lg text-xs font-bold tracking-wide transition-all cursor-pointer ${
+                  selectedPollutant === tab.id
+                    ? 'bg-[var(--color-surface-light)] dark:bg-[var(--color-surface-dark)] text-[var(--color-accent-light)] dark:text-[var(--color-accent-dark)] shadow-sm'
+                    : 'text-[var(--color-text-secondary-light)] dark:text-[var(--color-text-secondary-dark)] hover:text-[var(--color-text-primary-light)] dark:hover:text-[var(--color-text-primary-dark)]'
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 

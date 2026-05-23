@@ -27,8 +27,8 @@ export default function HeroAQICard({ aqi, updatedAt, nextUpdateIn, pollutants }
         {/* ── Two-column hero row (stacks on mobile, side-by-side on md+) ── */}
         <div className="flex flex-col md:flex-row md:items-stretch gap-6 md:gap-8 w-full">
 
-          {/* ── LEFT column: timestamps, advisory, scale bar ── */}
-          <div className="flex flex-col flex-1 min-w-0">
+          {/* ── LEFT column on desktop / BOTTOM on mobile: timestamps, advisory, scale bar ── */}
+          <div className="flex flex-col flex-1 min-w-0 order-2 md:order-1">
 
             {/* Timestamps */}
             <div className="flex flex-col items-start mb-4">
@@ -50,11 +50,11 @@ export default function HeroAQICard({ aqi, updatedAt, nextUpdateIn, pollutants }
             <AqiScaleBar currentAqi={aqi} />
           </div>
 
-          {/* ── Divider (visible on desktop only) ── */}
+          {/* ── Divider (visible on desktop only, hidden on mobile) ── */}
           <div className="hidden md:block w-px self-stretch bg-[var(--color-border-light)] dark:bg-[var(--color-border-dark)] opacity-60 shrink-0" />
 
-          {/* ── RIGHT column: giant AQI number + badge ── */}
-          <div className="flex flex-col items-center justify-center gap-4 md:min-w-[220px] md:px-4">
+          {/* ── RIGHT column on desktop / TOP on mobile: giant AQI number + badge ── */}
+          <div className="flex flex-col items-center justify-center gap-4 order-1 md:order-2 md:min-w-[220px] md:px-4">
             <span className={`text-[96px] md:text-[130px] font-black tracking-tighter leading-none ${colorClass}`} style={{ textShadow: '0 0 60px currentColor' }}>
               {aqi}
             </span>
