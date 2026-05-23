@@ -1,9 +1,11 @@
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useEffect, useState } from 'react';
 import { useAqiData } from '../hooks/useAqiData';
 import { formatRelativeTime, formatNextUpdate } from '../lib/time';
 import HeroAQICard from '../components/HeroAQICard';
 import HeroSkeleton from '../components/HeroSkeleton';
 import type { PollutantData } from '../components/PollutantCard';
+import { loadSnapshot, saveSnapshot, computeDeltas } from '../lib/snapshot';
+import type { AqiDeltas } from '../lib/snapshot';
 
 // Lazy-load ForecastChart — Recharts is heavy (~180KB) and always below the fold.
 // This defers its download until after the hero card is interactive.
@@ -11,6 +13,33 @@ const ForecastChart = lazy(() => import('../components/ForecastChart'));
 
 export default function Home() {
   const { data, loading, error } = useAqiData();
+  const [deltas, setDeltas] = useState<AqiDeltas | null>(null);
+
+  useEffect(() => {
+    if (!data) return;
+
+    const prev = loadSnapshot();
+
+    // Build a flat pollutant map for the snapshot
+    const currentPollutants = Object.fromEntries(
+      data.current.pollutants.map((p) => [p.id, p.value]),
+    );
+
+    // Only treat it as a new update when generated_at has advanced
+    if (!prev || prev.generated_at !== data.meta.generated_at) {
+      // Compute deltas against the old snapshot (null on first visit → no arrows)
+      setDeltas(computeDeltas({ aqi: data.current.aqi, pollutants: currentPollutants }, prev));
+      // Save the current reading as the new snapshot
+      saveSnapshot({
+        generated_at: data.meta.generated_at,
+        aqi: data.current.aqi,
+        pollutants: currentPollutants,
+      });
+    } else {
+      // Same generated_at = page refresh → keep showing deltas from last real update
+      setDeltas(computeDeltas({ aqi: data.current.aqi, pollutants: currentPollutants }, prev));
+    }
+  }, [data]);
 
   // --- Loading state ---
   if (loading) {
@@ -37,13 +66,14 @@ export default function Home() {
     );
   }
 
-  // --- Map JSON pollutants to PollutantCard props ---
+  // --- Map JSON pollutants to PollutantCard props (with deltas) ---
   const pollutants: PollutantData[] = data.current.pollutants.map((p) => ({
     id: p.id,
     name: p.display_name,
     value: p.value,
     unit: p.unit,
     category: p.category,
+    delta: deltas?.pollutants[p.id] ?? null,
   }));
 
   return (
@@ -51,6 +81,7 @@ export default function Home() {
       {/* Hero Section */}
       <HeroAQICard
         aqi={data.current.aqi}
+        aqiDelta={deltas?.aqi ?? null}
         updatedAt={formatRelativeTime(data.meta.generated_at)}
         nextUpdateIn={formatNextUpdate(data.meta.next_update_at)}
         pollutants={pollutants}

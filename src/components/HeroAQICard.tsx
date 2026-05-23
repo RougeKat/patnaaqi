@@ -2,16 +2,18 @@ import { getAqiCategory, getAqiColorClass, getAqiBgClass, getHealthAdvisory } fr
 import { Clock } from 'lucide-react';
 import AqiScaleBar from './AqiScaleBar';
 import PollutantCard from './PollutantCard';
+import DeltaBadge from './DeltaBadge';
 import type { PollutantData } from './PollutantCard';
 
 interface HeroAQICardProps {
   aqi: number;
+  aqiDelta?: number | null;
   updatedAt: string;
   nextUpdateIn: string;
   pollutants: PollutantData[];
 }
 
-export default function HeroAQICard({ aqi, updatedAt, nextUpdateIn, pollutants }: HeroAQICardProps) {
+export default function HeroAQICard({ aqi, aqiDelta, updatedAt, nextUpdateIn, pollutants }: HeroAQICardProps) {
   const category = getAqiCategory(aqi);
   const colorClass = getAqiColorClass(aqi);
   const bgClass = getAqiBgClass(aqi);
@@ -47,12 +49,15 @@ export default function HeroAQICard({ aqi, updatedAt, nextUpdateIn, pollutants }
 
         {/* 2 — AQI number + badge (top on mobile, right column on desktop) */}
         <div className="flex flex-col items-center justify-center gap-3 py-2 md:py-0 md:[grid-area:aqi]">
-          <span
-            className={`text-[100px] md:text-[130px] font-black tracking-tighter leading-none ${colorClass}`}
-            style={{ textShadow: '0 0 60px currentColor' }}
-          >
-            {aqi}
-          </span>
+          <div className="flex items-baseline gap-2">
+            <span
+              className={`text-[100px] md:text-[130px] font-black tracking-tighter leading-none ${colorClass}`}
+              style={{ textShadow: '0 0 60px currentColor' }}
+            >
+              {aqi}
+            </span>
+            <DeltaBadge delta={aqiDelta} className="text-4xl md:text-5xl" />
+          </div>
           <div className={`px-5 py-2 md:px-6 md:py-2.5 rounded-full text-lg md:text-xl font-bold uppercase tracking-wider ${colorClass} ${bgClass}`}>
             {category}
           </div>
