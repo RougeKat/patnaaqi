@@ -29,7 +29,7 @@ export default function PollutantCard({ data }: PollutantCardProps) {
         <span className={`text-2xl md:text-3xl font-bold tracking-tight ${colorClass}`}>
           {data.value}
         </span>
-        <DeltaBadge delta={data.delta} className="text-base md:text-lg" />
+        <DeltaBadge delta={data.delta} colorClass={colorClass} className="text-base md:text-lg" />
       </div>
       <div className={`px-3 py-1 rounded-full text-[11px] md:text-xs font-bold uppercase tracking-wider ${colorClass} ${bgClass}`}>
         {data.category}

@@ -1,20 +1,19 @@
 /**
  * DeltaBadge — renders ↑ / ↓ / — next to a value to indicate
  * the direction of change since the last hourly update.
- *
- * Colour coding:
- *   ↑  amber  (higher = generally worse air quality)
- *   ↓  green  (lower  = generally better air quality)
- *   —  muted  (no change)
+ * The colour is inherited from the parent via `colorClass`
+ * so the indicator always matches the value it sits beside.
  */
 
 interface DeltaBadgeProps {
   /** Numeric difference (current − previous). null = no previous data. */
   delta: number | null | undefined;
+  /** Tailwind colour class from the parent (e.g. getAqiColorClass result). */
+  colorClass: string;
   className?: string;
 }
 
-export default function DeltaBadge({ delta, className = '' }: DeltaBadgeProps) {
+export default function DeltaBadge({ delta, colorClass, className = '' }: DeltaBadgeProps) {
   if (delta === null || delta === undefined) return null;
 
   if (delta === 0) {
@@ -28,13 +27,12 @@ export default function DeltaBadge({ delta, className = '' }: DeltaBadgeProps) {
     );
   }
 
-  const isUp = delta > 0;
   return (
     <span
-      className={`font-bold ${isUp ? 'text-[var(--color-aqi-moderate)]' : 'text-[var(--color-aqi-good)]'} ${className}`}
-      aria-label={isUp ? 'increased' : 'decreased'}
+      className={`font-bold ${colorClass} ${className}`}
+      aria-label={delta > 0 ? 'increased' : 'decreased'}
     >
-      {isUp ? '↑' : '↓'}
+      {delta > 0 ? '↑' : '↓'}
     </span>
   );
 }

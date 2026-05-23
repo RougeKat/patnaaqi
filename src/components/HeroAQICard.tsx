@@ -56,7 +56,7 @@ export default function HeroAQICard({ aqi, aqiDelta, updatedAt, nextUpdateIn, po
             >
               {aqi}
             </span>
-            <DeltaBadge delta={aqiDelta} className="text-4xl md:text-5xl" />
+            <DeltaBadge delta={aqiDelta} colorClass={colorClass} className="text-4xl md:text-5xl" />
           </div>
           <div className={`px-5 py-2 md:px-6 md:py-2.5 rounded-full text-lg md:text-xl font-bold uppercase tracking-wider ${colorClass} ${bgClass}`}>
             {category}
