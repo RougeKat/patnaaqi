@@ -28,10 +28,10 @@ export default function HeroAQICard({ aqi, updatedAt, nextUpdateIn, pollutants }
         <div className="flex flex-col md:flex-row md:items-stretch gap-6 md:gap-8 w-full">
 
           {/* ── LEFT column on desktop / BOTTOM on mobile: timestamps, advisory, scale bar ── */}
-          <div className="flex flex-col flex-1 min-w-0 order-2 md:order-1">
+          <div className="flex flex-col flex-1 min-w-0 order-2 md:order-1 gap-0">
 
-            {/* Timestamps */}
-            <div className="flex flex-col items-start mb-4">
+            {/* Timestamps — always first on both mobile and desktop */}
+            <div className="flex flex-col items-start order-1 mb-3 md:mb-4">
               <div className="flex items-center gap-1.5 text-sm md:text-base font-semibold text-[var(--color-text-primary-light)] dark:text-[var(--color-text-primary-dark)]">
                 <span>Updated {updatedAt}</span>
                 <Clock size={16} className="text-[var(--color-text-secondary-light)] dark:text-[var(--color-text-secondary-dark)] shrink-0" />
@@ -41,13 +41,15 @@ export default function HeroAQICard({ aqi, updatedAt, nextUpdateIn, pollutants }
               </span>
             </div>
 
-            {/* Advisory Text */}
-            <p className="text-base md:text-lg font-medium text-[var(--color-text-primary-light)] dark:text-[var(--color-text-primary-dark)] leading-relaxed flex-1">
+            {/* Scale Bar — second on mobile, last on desktop */}
+            <div className="order-2 md:order-3">
+              <AqiScaleBar currentAqi={aqi} />
+            </div>
+
+            {/* Advisory Text — last on mobile, second on desktop */}
+            <p className="order-3 md:order-2 text-base md:text-lg font-medium text-[var(--color-text-primary-light)] dark:text-[var(--color-text-primary-dark)] leading-relaxed md:flex-1 mt-3 md:mt-0">
               {advisory}
             </p>
-
-            {/* Scale Bar */}
-            <AqiScaleBar currentAqi={aqi} />
           </div>
 
           {/* ── Divider (visible on desktop only, hidden on mobile) ── */}
