@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-06-02T20:30:28.062Z",
-    "next_update_at": "2026-06-02T21:30:28.062Z",
+    "generated_at": "2026-06-02T21:30:28.018Z",
+    "next_update_at": "2026-06-02T22:30:28.018Z",
     "sources": [
       "WAQI",
       "Open-Meteo"
@@ -26,42 +26,42 @@
       {
         "id": "pm25",
         "display_name": "PM2.5",
-        "value": 97.1,
-        "unit": "µg/m³",
-        "category": "Poor"
-      },
-      {
-        "id": "pm10",
-        "display_name": "PM10",
-        "value": 104.3,
+        "value": 89.2,
         "unit": "µg/m³",
         "category": "Moderate"
       },
       {
+        "id": "pm10",
+        "display_name": "PM10",
+        "value": 96.2,
+        "unit": "µg/m³",
+        "category": "Satisfactory"
+      },
+      {
         "id": "no2",
         "display_name": "NO₂",
-        "value": 57.5,
+        "value": 50.7,
         "unit": "µg/m³",
         "category": "Satisfactory"
       },
       {
         "id": "so2",
         "display_name": "SO₂",
-        "value": 19.5,
+        "value": 16.5,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "co",
         "display_name": "CO",
-        "value": 0.57,
+        "value": 0.55,
         "unit": "mg/m³",
         "category": "Good"
       },
       {
         "id": "o3",
         "display_name": "O₃",
-        "value": 35,
+        "value": 37,
         "unit": "µg/m³",
         "category": "Good"
       }
@@ -69,15 +69,6 @@
   },
   "forecast": {
     "hourly": [
-      {
-        "time": "2026-06-03T02:00+05:30",
-        "pm25": 89.2,
-        "pm10": 96.2,
-        "no2": 50.7,
-        "o3": 37,
-        "so2": 16.5,
-        "co": 0.55
-      },
       {
         "time": "2026-06-03T03:00+05:30",
         "pm25": 83.4,
@@ -338,6 +329,15 @@
         "o3": 110,
         "so2": 20,
         "co": 0.72
+      },
+      {
+        "time": "2026-06-04T08:00+05:30",
+        "pm25": 70.5,
+        "pm10": 87.8,
+        "no2": 15,
+        "o3": 154,
+        "so2": 20.3,
+        "co": 0.61
       }
     ]
   }
