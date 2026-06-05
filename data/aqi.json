@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-06-05T01:34:14.520Z",
-    "next_update_at": "2026-06-05T02:34:14.520Z",
+    "generated_at": "2026-06-05T02:30:25.251Z",
+    "next_update_at": "2026-06-05T03:30:25.251Z",
     "sources": [
       "WAQI",
       "Open-Meteo"
@@ -15,8 +15,8 @@
     }
   },
   "current": {
-    "aqi": 102,
-    "category": "Moderate",
+    "aqi": 100,
+    "category": "Satisfactory",
     "dominant_pollutant": "pm25",
     "station": {
       "name": "IGSC Planetarium Complex, Patna, India",
@@ -26,28 +26,28 @@
       {
         "id": "pm25",
         "display_name": "PM2.5",
-        "value": 78.9,
+        "value": 74.3,
         "unit": "µg/m³",
         "category": "Moderate"
       },
       {
         "id": "pm10",
         "display_name": "PM10",
-        "value": 88.5,
+        "value": 84.5,
         "unit": "µg/m³",
         "category": "Satisfactory"
       },
       {
         "id": "no2",
         "display_name": "NO₂",
-        "value": 19.1,
+        "value": 14.1,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "so2",
         "display_name": "SO₂",
-        "value": 14.7,
+        "value": 16.6,
         "unit": "µg/m³",
         "category": "Good"
       },
@@ -61,23 +61,14 @@
       {
         "id": "o3",
         "display_name": "O₃",
-        "value": 86,
+        "value": 119,
         "unit": "µg/m³",
-        "category": "Satisfactory"
+        "category": "Moderate"
       }
     ]
   },
   "forecast": {
     "hourly": [
-      {
-        "time": "2026-06-05T07:00+05:30",
-        "pm25": 74.3,
-        "pm10": 84.5,
-        "no2": 14.1,
-        "o3": 119,
-        "so2": 16.6,
-        "co": 0.44
-      },
       {
         "time": "2026-06-05T08:00+05:30",
         "pm25": 73.1,
@@ -338,6 +329,15 @@
         "o3": 220,
         "so2": 15.1,
         "co": 0.33
+      },
+      {
+        "time": "2026-06-06T13:00+05:30",
+        "pm25": 57.6,
+        "pm10": 83.6,
+        "no2": 1.3,
+        "o3": 209,
+        "so2": 12.6,
+        "co": 0.32
       }
     ]
   }
