@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-06-06T02:30:25.167Z",
-    "next_update_at": "2026-06-06T03:30:25.167Z",
+    "generated_at": "2026-06-06T03:30:22.962Z",
+    "next_update_at": "2026-06-06T04:30:22.962Z",
     "sources": [
       "WAQI",
       "Open-Meteo"
@@ -15,39 +15,39 @@
     }
   },
   "current": {
-    "aqi": 125,
-    "category": "Moderate",
+    "aqi": 30,
+    "category": "Good",
     "dominant_pollutant": "pm25",
     "station": {
-      "name": "Muradpur, Patna, India",
-      "waqi_id": 12744
+      "name": "IGSC Planetarium Complex, Patna, India",
+      "waqi_id": 8674
     },
     "pollutants": [
       {
         "id": "pm25",
         "display_name": "PM2.5",
-        "value": 59.4,
+        "value": 58.7,
         "unit": "µg/m³",
         "category": "Satisfactory"
       },
       {
         "id": "pm10",
         "display_name": "PM10",
-        "value": 63.8,
+        "value": 63.1,
         "unit": "µg/m³",
         "category": "Satisfactory"
       },
       {
         "id": "no2",
         "display_name": "NO₂",
-        "value": 11.1,
+        "value": 9.3,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "so2",
         "display_name": "SO₂",
-        "value": 19.9,
+        "value": 20.1,
         "unit": "µg/m³",
         "category": "Good"
       },
@@ -61,7 +61,7 @@
       {
         "id": "o3",
         "display_name": "O₃",
-        "value": 113,
+        "value": 131,
         "unit": "µg/m³",
         "category": "Moderate"
       }
@@ -69,15 +69,6 @@
   },
   "forecast": {
     "hourly": [
-      {
-        "time": "2026-06-06T08:00+05:30",
-        "pm25": 58.7,
-        "pm10": 63.1,
-        "no2": 9.3,
-        "o3": 131,
-        "so2": 20.1,
-        "co": 0.47
-      },
       {
         "time": "2026-06-06T09:00+05:30",
         "pm25": 57.4,
@@ -337,6 +328,15 @@
         "no2": 1.2,
         "o3": 193,
         "so2": 7.2,
+        "co": 0.33
+      },
+      {
+        "time": "2026-06-07T14:00+05:30",
+        "pm25": 51.7,
+        "pm10": 75.7,
+        "no2": 1.8,
+        "o3": 183,
+        "so2": 6.5,
         "co": 0.33
       }
     ]
