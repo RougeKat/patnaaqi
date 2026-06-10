@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-06-10T08:30:29.091Z",
-    "next_update_at": "2026-06-10T09:30:29.091Z",
+    "generated_at": "2026-06-10T09:02:34.384Z",
+    "next_update_at": "2026-06-10T10:02:34.384Z",
     "sources": [
       "WAQI",
       "Open-Meteo"
@@ -26,42 +26,42 @@
       {
         "id": "pm25",
         "display_name": "PM2.5",
-        "value": 55.8,
+        "value": 54.8,
         "unit": "µg/m³",
         "category": "Satisfactory"
       },
       {
         "id": "pm10",
         "display_name": "PM10",
-        "value": 93.6,
+        "value": 96.2,
         "unit": "µg/m³",
         "category": "Satisfactory"
       },
       {
         "id": "no2",
         "display_name": "NO₂",
-        "value": 1.8,
+        "value": 2.8,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "so2",
         "display_name": "SO₂",
-        "value": 14.6,
+        "value": 13.9,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "co",
         "display_name": "CO",
-        "value": 0.37,
+        "value": 0.38,
         "unit": "mg/m³",
         "category": "Good"
       },
       {
         "id": "o3",
         "display_name": "O₃",
-        "value": 217,
+        "value": 211,
         "unit": "µg/m³",
         "category": "Very Poor"
       }
