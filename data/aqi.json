@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-06-11T13:30:35.122Z",
-    "next_update_at": "2026-06-11T14:30:35.122Z",
+    "generated_at": "2026-06-11T14:13:54.322Z",
+    "next_update_at": "2026-06-11T15:13:54.322Z",
     "sources": [
       "WAQI",
       "Open-Meteo"
@@ -15,9 +15,9 @@
     }
   },
   "current": {
-    "aqi": 24,
-    "category": "Good",
-    "dominant_pollutant": "o3",
+    "aqi": 72,
+    "category": "Satisfactory",
+    "dominant_pollutant": "pm25",
     "station": {
       "name": "IGSC Planetarium Complex, Patna, India",
       "waqi_id": 8674
@@ -26,42 +26,42 @@
       {
         "id": "pm25",
         "display_name": "PM2.5",
-        "value": 46,
+        "value": 48.4,
         "unit": "µg/m³",
         "category": "Satisfactory"
       },
       {
         "id": "pm10",
         "display_name": "PM10",
-        "value": 76.6,
+        "value": 75.2,
         "unit": "µg/m³",
         "category": "Satisfactory"
       },
       {
         "id": "no2",
         "display_name": "NO₂",
-        "value": 10.9,
+        "value": 16.2,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "so2",
         "display_name": "SO₂",
-        "value": 16.3,
+        "value": 17.6,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "co",
         "display_name": "CO",
-        "value": 0.47,
+        "value": 0.54,
         "unit": "mg/m³",
         "category": "Good"
       },
       {
         "id": "o3",
         "display_name": "O₃",
-        "value": 161,
+        "value": 133,
         "unit": "µg/m³",
         "category": "Moderate"
       }
