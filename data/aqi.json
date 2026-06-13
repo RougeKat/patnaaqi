@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-06-13T18:30:30.453Z",
-    "next_update_at": "2026-06-13T19:30:30.453Z",
+    "generated_at": "2026-06-13T18:49:37.227Z",
+    "next_update_at": "2026-06-13T19:49:37.227Z",
     "sources": [
       "WAQI",
       "Open-Meteo"
@@ -15,8 +15,8 @@
     }
   },
   "current": {
-    "aqi": 45,
-    "category": "Good",
+    "aqi": 51,
+    "category": "Satisfactory",
     "dominant_pollutant": "pm25",
     "station": {
       "name": "IGSC Planetarium Complex, Patna, India",
