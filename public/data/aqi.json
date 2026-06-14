@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-06-14T16:30:31.078Z",
-    "next_update_at": "2026-06-14T17:30:31.078Z",
+    "generated_at": "2026-06-14T16:50:48.800Z",
+    "next_update_at": "2026-06-14T17:50:48.800Z",
     "sources": [
       "WAQI",
       "Open-Meteo"
@@ -15,7 +15,7 @@
     }
   },
   "current": {
-    "aqi": 65,
+    "aqi": 80,
     "category": "Satisfactory",
     "dominant_pollutant": "pm25",
     "station": {
