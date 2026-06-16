@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-06-16T01:30:29.816Z",
-    "next_update_at": "2026-06-16T02:30:29.816Z",
+    "generated_at": "2026-06-16T02:30:31.028Z",
+    "next_update_at": "2026-06-16T03:30:31.028Z",
     "sources": [
       "WAQI",
       "Open-Meteo"
@@ -15,7 +15,7 @@
     }
   },
   "current": {
-    "aqi": 86,
+    "aqi": 89,
     "category": "Satisfactory",
     "dominant_pollutant": "pm25",
     "station": {
@@ -26,58 +26,49 @@
       {
         "id": "pm25",
         "display_name": "PM2.5",
-        "value": 76.4,
+        "value": 74.3,
         "unit": "µg/m³",
         "category": "Moderate"
       },
       {
         "id": "pm10",
         "display_name": "PM10",
-        "value": 88.9,
+        "value": 85.4,
         "unit": "µg/m³",
         "category": "Satisfactory"
       },
       {
         "id": "no2",
         "display_name": "NO₂",
-        "value": 26.4,
+        "value": 18.9,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "so2",
         "display_name": "SO₂",
-        "value": 18.2,
+        "value": 19.9,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "co",
         "display_name": "CO",
-        "value": 0.84,
+        "value": 0.76,
         "unit": "mg/m³",
         "category": "Good"
       },
       {
         "id": "o3",
         "display_name": "O₃",
-        "value": 76,
+        "value": 119,
         "unit": "µg/m³",
-        "category": "Satisfactory"
+        "category": "Moderate"
       }
     ]
   },
   "forecast": {
     "hourly": [
-      {
-        "time": "2026-06-16T07:00+05:30",
-        "pm25": 74.3,
-        "pm10": 85.4,
-        "no2": 18.9,
-        "o3": 119,
-        "so2": 19.9,
-        "co": 0.76
-      },
       {
         "time": "2026-06-16T08:00+05:30",
         "pm25": 71.5,
@@ -338,6 +329,15 @@
         "o3": 202,
         "so2": 11,
         "co": 0.25
+      },
+      {
+        "time": "2026-06-17T13:00+05:30",
+        "pm25": 68.5,
+        "pm10": 182.5,
+        "no2": 1,
+        "o3": 188,
+        "so2": 9.3,
+        "co": 0.24
       }
     ]
   }
