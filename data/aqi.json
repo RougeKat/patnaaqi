@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-06-16T06:30:39.205Z",
-    "next_update_at": "2026-06-16T07:30:39.205Z",
+    "generated_at": "2026-06-16T07:30:39.517Z",
+    "next_update_at": "2026-06-16T08:30:39.517Z",
     "sources": [
       "WAQI",
       "Open-Meteo"
@@ -15,8 +15,8 @@
     }
   },
   "current": {
-    "aqi": 80,
-    "category": "Satisfactory",
+    "aqi": 134,
+    "category": "Moderate",
     "dominant_pollutant": "pm25",
     "station": {
       "name": "IGSC Planetarium Complex, Patna, India",
@@ -33,35 +33,35 @@
       {
         "id": "pm10",
         "display_name": "PM10",
-        "value": 122,
+        "value": 138.8,
         "unit": "µg/m³",
         "category": "Moderate"
       },
       {
         "id": "no2",
         "display_name": "NO₂",
-        "value": 3.3,
+        "value": 1.8,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "so2",
         "display_name": "SO₂",
-        "value": 15.8,
+        "value": 13.7,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "co",
         "display_name": "CO",
-        "value": 0.31,
+        "value": 0.27,
         "unit": "mg/m³",
         "category": "Good"
       },
       {
         "id": "o3",
         "display_name": "O₃",
-        "value": 228,
+        "value": 224,
         "unit": "µg/m³",
         "category": "Very Poor"
       }
@@ -69,15 +69,6 @@
   },
   "forecast": {
     "hourly": [
-      {
-        "time": "2026-06-16T12:00+05:30",
-        "pm25": 62.6,
-        "pm10": 138.8,
-        "no2": 1.8,
-        "o3": 224,
-        "so2": 13.7,
-        "co": 0.27
-      },
       {
         "time": "2026-06-16T13:00+05:30",
         "pm25": 61,
@@ -338,6 +329,15 @@
         "o3": 125,
         "so2": 9.4,
         "co": 0.32
+      },
+      {
+        "time": "2026-06-17T18:00+05:30",
+        "pm25": 70.8,
+        "pm10": 128.1,
+        "no2": 28.4,
+        "o3": 100,
+        "so2": 13.8,
+        "co": 0.41
       }
     ]
   }
