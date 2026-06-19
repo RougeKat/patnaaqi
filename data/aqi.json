@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-06-19T13:30:34.121Z",
-    "next_update_at": "2026-06-19T14:30:34.121Z",
+    "generated_at": "2026-06-19T14:30:38.514Z",
+    "next_update_at": "2026-06-19T15:30:38.514Z",
     "sources": [
       "WAQI",
       "Open-Meteo"
@@ -15,69 +15,60 @@
     }
   },
   "current": {
-    "aqi": 140,
-    "category": "Moderate",
+    "aqi": 59,
+    "category": "Satisfactory",
     "dominant_pollutant": "pm25",
     "station": {
-      "name": "Muradpur, Patna, India",
-      "waqi_id": 12744
+      "name": "IGSC Planetarium Complex, Patna, India",
+      "waqi_id": 8674
     },
     "pollutants": [
       {
         "id": "pm25",
         "display_name": "PM2.5",
-        "value": 63.3,
+        "value": 76.6,
         "unit": "µg/m³",
         "category": "Moderate"
       },
       {
         "id": "pm10",
         "display_name": "PM10",
-        "value": 126.7,
+        "value": 141.1,
         "unit": "µg/m³",
         "category": "Moderate"
       },
       {
         "id": "no2",
         "display_name": "NO₂",
-        "value": 23.8,
+        "value": 37.7,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "so2",
         "display_name": "SO₂",
-        "value": 12.9,
+        "value": 18.2,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "co",
         "display_name": "CO",
-        "value": 0.31,
+        "value": 0.35,
         "unit": "mg/m³",
         "category": "Good"
       },
       {
         "id": "o3",
         "display_name": "O₃",
-        "value": 103,
+        "value": 80,
         "unit": "µg/m³",
-        "category": "Moderate"
+        "category": "Satisfactory"
       }
     ]
   },
   "forecast": {
     "hourly": [
-      {
-        "time": "2026-06-19T19:00+05:30",
-        "pm25": 76.6,
-        "pm10": 141.1,
-        "no2": 37.7,
-        "o3": 80,
-        "so2": 18.2,
-        "co": 0.35
-      },
       {
         "time": "2026-06-19T20:00+05:30",
         "pm25": 85.2,
