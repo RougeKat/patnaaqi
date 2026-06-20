@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-06-19T23:33:04.413Z",
-    "next_update_at": "2026-06-20T00:33:04.413Z",
+    "generated_at": "2026-06-20T04:46:41.910Z",
+    "next_update_at": "2026-06-20T05:46:41.910Z",
     "sources": [
       "WAQI",
       "Open-Meteo"
@@ -15,9 +15,9 @@
     }
   },
   "current": {
-    "aqi": 129,
-    "category": "Moderate",
-    "dominant_pollutant": "pm25",
+    "aqi": 24,
+    "category": "Good",
+    "dominant_pollutant": "o3",
     "station": {
       "name": "IGSC Planetarium Complex, Patna, India",
       "waqi_id": 8674
@@ -26,94 +26,49 @@
       {
         "id": "pm25",
         "display_name": "PM2.5",
-        "value": 53,
+        "value": 49.9,
         "unit": "µg/m³",
         "category": "Satisfactory"
       },
       {
         "id": "pm10",
         "display_name": "PM10",
-        "value": 57,
+        "value": 60.8,
         "unit": "µg/m³",
         "category": "Satisfactory"
       },
       {
         "id": "no2",
         "display_name": "NO₂",
-        "value": 28.4,
+        "value": 8.5,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "so2",
         "display_name": "SO₂",
-        "value": 15.3,
+        "value": 18.3,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "co",
         "display_name": "CO",
-        "value": 0.38,
+        "value": 0.31,
         "unit": "mg/m³",
         "category": "Good"
       },
       {
         "id": "o3",
         "display_name": "O₃",
-        "value": 44,
+        "value": 157,
         "unit": "µg/m³",
-        "category": "Good"
+        "category": "Moderate"
       }
     ]
   },
   "forecast": {
     "hourly": [
-      {
-        "time": "2026-06-20T05:00+05:30",
-        "pm25": 56.2,
-        "pm10": 59.8,
-        "no2": 28.3,
-        "o3": 48,
-        "so2": 16.3,
-        "co": 0.31
-      },
-      {
-        "time": "2026-06-20T06:00+05:30",
-        "pm25": 54.8,
-        "pm10": 58.7,
-        "no2": 24.1,
-        "o3": 67,
-        "so2": 17.4,
-        "co": 0.3
-      },
-      {
-        "time": "2026-06-20T07:00+05:30",
-        "pm25": 53.2,
-        "pm10": 58.4,
-        "no2": 17.7,
-        "o3": 94,
-        "so2": 18.5,
-        "co": 0.31
-      },
-      {
-        "time": "2026-06-20T08:00+05:30",
-        "pm25": 50.6,
-        "pm10": 58.2,
-        "no2": 12.2,
-        "o3": 124,
-        "so2": 18.9,
-        "co": 0.32
-      },
-      {
-        "time": "2026-06-20T09:00+05:30",
-        "pm25": 49.9,
-        "pm10": 60.8,
-        "no2": 8.5,
-        "o3": 157,
-        "so2": 18.3,
-        "co": 0.31
-      },
       {
         "time": "2026-06-20T10:00+05:30",
         "pm25": 49.9,
@@ -338,6 +293,51 @@
         "o3": 154,
         "so2": 12,
         "co": 0.27
+      },
+      {
+        "time": "2026-06-21T11:00+05:30",
+        "pm25": 44.6,
+        "pm10": 95.9,
+        "no2": 2.7,
+        "o3": 171,
+        "so2": 11,
+        "co": 0.25
+      },
+      {
+        "time": "2026-06-21T12:00+05:30",
+        "pm25": 53,
+        "pm10": 145.8,
+        "no2": 1.5,
+        "o3": 177,
+        "so2": 10,
+        "co": 0.23
+      },
+      {
+        "time": "2026-06-21T13:00+05:30",
+        "pm25": 56.5,
+        "pm10": 167.2,
+        "no2": 1,
+        "o3": 176,
+        "so2": 8.9,
+        "co": 0.23
+      },
+      {
+        "time": "2026-06-21T14:00+05:30",
+        "pm25": 57.4,
+        "pm10": 171.4,
+        "no2": 1.8,
+        "o3": 170,
+        "so2": 8.3,
+        "co": 0.23
+      },
+      {
+        "time": "2026-06-21T15:00+05:30",
+        "pm25": 59,
+        "pm10": 175.6,
+        "no2": 3.9,
+        "o3": 159,
+        "so2": 7.9,
+        "co": 0.23
       }
     ]
   }
