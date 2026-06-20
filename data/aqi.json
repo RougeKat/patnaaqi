@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-06-20T13:01:06.544Z",
-    "next_update_at": "2026-06-20T14:01:06.544Z",
+    "generated_at": "2026-06-20T15:19:18.667Z",
+    "next_update_at": "2026-06-20T16:19:18.667Z",
     "sources": [
       "WAQI",
       "Open-Meteo"
@@ -15,9 +15,9 @@
     }
   },
   "current": {
-    "aqi": 107,
-    "category": "Moderate",
-    "dominant_pollutant": "pm25",
+    "aqi": 25,
+    "category": "Good",
+    "dominant_pollutant": "o3",
     "station": {
       "name": "IGSC Planetarium Complex, Patna, India",
       "waqi_id": 8674
@@ -26,67 +26,49 @@
       {
         "id": "pm25",
         "display_name": "PM2.5",
-        "value": 68,
+        "value": 84.3,
         "unit": "µg/m³",
         "category": "Moderate"
       },
       {
         "id": "pm10",
         "display_name": "PM10",
-        "value": 110.4,
+        "value": 122.9,
         "unit": "µg/m³",
         "category": "Moderate"
       },
       {
         "id": "no2",
         "display_name": "NO₂",
-        "value": 22.9,
+        "value": 39.5,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "so2",
         "display_name": "SO₂",
-        "value": 12.4,
+        "value": 18.3,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "co",
         "display_name": "CO",
-        "value": 0.35,
+        "value": 0.38,
         "unit": "mg/m³",
         "category": "Good"
       },
       {
         "id": "o3",
         "display_name": "O₃",
-        "value": 111,
+        "value": 72,
         "unit": "µg/m³",
-        "category": "Moderate"
+        "category": "Satisfactory"
       }
     ]
   },
   "forecast": {
     "hourly": [
-      {
-        "time": "2026-06-20T18:00+05:30",
-        "pm25": 68,
-        "pm10": 110.4,
-        "no2": 22.9,
-        "o3": 111,
-        "so2": 12.4,
-        "co": 0.35
-      },
-      {
-        "time": "2026-06-20T19:00+05:30",
-        "pm25": 79.2,
-        "pm10": 121.5,
-        "no2": 33.5,
-        "o3": 88,
-        "so2": 16.2,
-        "co": 0.37
-      },
       {
         "time": "2026-06-20T20:00+05:30",
         "pm25": 84.3,
