@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-06-21T10:50:13.132Z",
-    "next_update_at": "2026-06-21T11:50:13.132Z",
+    "generated_at": "2026-06-21T13:19:58.054Z",
+    "next_update_at": "2026-06-21T14:19:58.054Z",
     "sources": [
       "WAQI",
       "Open-Meteo"
@@ -15,7 +15,7 @@
     }
   },
   "current": {
-    "aqi": 24,
+    "aqi": 25,
     "category": "Good",
     "dominant_pollutant": "o3",
     "station": {
@@ -26,42 +26,42 @@
       {
         "id": "pm25",
         "display_name": "PM2.5",
-        "value": 65.2,
+        "value": 78.5,
         "unit": "µg/m³",
         "category": "Moderate"
       },
       {
         "id": "pm10",
         "display_name": "PM10",
-        "value": 217.9,
+        "value": 188.1,
         "unit": "µg/m³",
         "category": "Moderate"
       },
       {
         "id": "no2",
         "display_name": "NO₂",
-        "value": 3.5,
+        "value": 15.7,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "so2",
         "display_name": "SO₂",
-        "value": 8.6,
+        "value": 11.7,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "co",
         "display_name": "CO",
-        "value": 0.23,
+        "value": 0.28,
         "unit": "mg/m³",
         "category": "Good"
       },
       {
         "id": "o3",
         "display_name": "O₃",
-        "value": 161,
+        "value": 112,
         "unit": "µg/m³",
         "category": "Moderate"
       }
@@ -69,24 +69,6 @@
   },
   "forecast": {
     "hourly": [
-      {
-        "time": "2026-06-21T16:00+05:30",
-        "pm25": 67.3,
-        "pm10": 204.4,
-        "no2": 6.2,
-        "o3": 147,
-        "so2": 9,
-        "co": 0.24
-      },
-      {
-        "time": "2026-06-21T17:00+05:30",
-        "pm25": 73.8,
-        "pm10": 194.2,
-        "no2": 9.9,
-        "o3": 131,
-        "so2": 9.8,
-        "co": 0.26
-      },
       {
         "time": "2026-06-21T18:00+05:30",
         "pm25": 78.5,
@@ -338,6 +320,24 @@
         "o3": 45,
         "so2": 17,
         "co": 0.34
+      },
+      {
+        "time": "2026-06-22T22:00+05:30",
+        "pm25": 69.6,
+        "pm10": 108.5,
+        "no2": 34.5,
+        "o3": 48,
+        "so2": 14.5,
+        "co": 0.37
+      },
+      {
+        "time": "2026-06-22T23:00+05:30",
+        "pm25": 64.7,
+        "pm10": 99.7,
+        "no2": 28.7,
+        "o3": 49,
+        "so2": 12.4,
+        "co": 0.4
       }
     ]
   }
