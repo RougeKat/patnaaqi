@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-07-09T22:46:21.189Z",
-    "next_update_at": "2026-07-09T23:46:21.189Z",
+    "generated_at": "2026-07-10T01:04:20.143Z",
+    "next_update_at": "2026-07-10T02:04:20.143Z",
     "sources": [
       "WAQI",
       "Open-Meteo"
@@ -26,42 +26,42 @@
       {
         "id": "pm25",
         "display_name": "PM2.5",
-        "value": 27.3,
+        "value": 25.1,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "pm10",
         "display_name": "PM10",
-        "value": 27.8,
+        "value": 25.8,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "no2",
         "display_name": "NO₂",
-        "value": 14.9,
+        "value": 15.3,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "so2",
         "display_name": "SO₂",
-        "value": 8.4,
+        "value": 10.5,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "co",
         "display_name": "CO",
-        "value": 0.32,
+        "value": 0.34,
         "unit": "mg/m³",
         "category": "Good"
       },
       {
         "id": "o3",
         "display_name": "O₃",
-        "value": 72,
+        "value": 65,
         "unit": "µg/m³",
         "category": "Satisfactory"
       }
@@ -69,24 +69,6 @@
   },
   "forecast": {
     "hourly": [
-      {
-        "time": "2026-07-10T04:00+05:30",
-        "pm25": 28.1,
-        "pm10": 28.6,
-        "no2": 16,
-        "o3": 67,
-        "so2": 8.9,
-        "co": 0.33
-      },
-      {
-        "time": "2026-07-10T05:00+05:30",
-        "pm25": 28.2,
-        "pm10": 28.6,
-        "no2": 16.3,
-        "o3": 64,
-        "so2": 9.6,
-        "co": 0.34
-      },
       {
         "time": "2026-07-10T06:00+05:30",
         "pm25": 25.1,
@@ -338,6 +320,24 @@
         "o3": 96,
         "so2": 6.4,
         "co": 0.25
+      },
+      {
+        "time": "2026-07-11T10:00+05:30",
+        "pm25": 11,
+        "pm10": 12,
+        "no2": 6.2,
+        "o3": 106,
+        "so2": 6.6,
+        "co": 0.22
+      },
+      {
+        "time": "2026-07-11T11:00+05:30",
+        "pm25": 10.8,
+        "pm10": 11.6,
+        "no2": 5.2,
+        "o3": 115,
+        "so2": 6.6,
+        "co": 0.2
       }
     ]
   }
