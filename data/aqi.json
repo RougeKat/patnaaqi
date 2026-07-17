@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-07-17T11:46:38.987Z",
-    "next_update_at": "2026-07-17T12:46:38.987Z",
+    "generated_at": "2026-07-17T14:09:07.409Z",
+    "next_update_at": "2026-07-17T15:09:07.409Z",
     "sources": [
       "WAQI",
       "Open-Meteo"
@@ -26,67 +26,49 @@
       {
         "id": "pm25",
         "display_name": "PM2.5",
-        "value": 24.3,
+        "value": 32.4,
         "unit": "µg/m³",
-        "category": "Good"
+        "category": "Satisfactory"
       },
       {
         "id": "pm10",
         "display_name": "PM10",
-        "value": 25.3,
+        "value": 32.9,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "no2",
         "display_name": "NO₂",
-        "value": 6.4,
+        "value": 15.8,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "so2",
         "display_name": "SO₂",
-        "value": 6.3,
+        "value": 7.3,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "co",
         "display_name": "CO",
-        "value": 0.3,
+        "value": 0.4,
         "unit": "mg/m³",
         "category": "Good"
       },
       {
         "id": "o3",
         "display_name": "O₃",
-        "value": 130,
+        "value": 88,
         "unit": "µg/m³",
-        "category": "Moderate"
+        "category": "Satisfactory"
       }
     ]
   },
   "forecast": {
     "hourly": [
-      {
-        "time": "2026-07-17T17:00+05:30",
-        "pm25": 22.4,
-        "pm10": 23.2,
-        "no2": 8.8,
-        "o3": 117,
-        "so2": 6.4,
-        "co": 0.32
-      },
-      {
-        "time": "2026-07-17T18:00+05:30",
-        "pm25": 26.4,
-        "pm10": 27,
-        "no2": 12.1,
-        "o3": 103,
-        "so2": 6.8,
-        "co": 0.36
-      },
       {
         "time": "2026-07-17T19:00+05:30",
         "pm25": 32.4,
@@ -338,6 +320,15 @@
         "o3": 91,
         "so2": 13.1,
         "co": 0.39
+      },
+      {
+        "time": "2026-07-18T23:00+05:30",
+        "pm25": 26.4,
+        "pm10": 26.5,
+        "no2": 12.6,
+        "o3": 92,
+        "so2": 13.7,
+        "co": 0.37
       }
     ]
   }
