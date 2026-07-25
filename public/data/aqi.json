@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-07-25T17:26:50.957Z",
-    "next_update_at": "2026-07-25T18:26:50.957Z",
+    "generated_at": "2026-07-25T18:12:55.551Z",
+    "next_update_at": "2026-07-25T19:12:55.551Z",
     "sources": [
       "WAQI",
       "Open-Meteo"
@@ -26,58 +26,49 @@
       {
         "id": "pm25",
         "display_name": "PM2.5",
-        "value": 37.7,
+        "value": 38.3,
         "unit": "µg/m³",
         "category": "Satisfactory"
       },
       {
         "id": "pm10",
         "display_name": "PM10",
-        "value": 38.5,
+        "value": 39.2,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "no2",
         "display_name": "NO₂",
-        "value": 27.4,
+        "value": 27.3,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "so2",
         "display_name": "SO₂",
-        "value": 13.3,
+        "value": 12.8,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "co",
         "display_name": "CO",
-        "value": 0.41,
+        "value": 0.35,
         "unit": "mg/m³",
         "category": "Good"
       },
       {
         "id": "o3",
         "display_name": "O₃",
-        "value": 55,
+        "value": 50,
         "unit": "µg/m³",
-        "category": "Satisfactory"
+        "category": "Good"
       }
     ]
   },
   "forecast": {
     "hourly": [
-      {
-        "time": "2026-07-25T22:00+05:30",
-        "pm25": 37.7,
-        "pm10": 38.5,
-        "no2": 27.4,
-        "o3": 55,
-        "so2": 13.3,
-        "co": 0.41
-      },
       {
         "time": "2026-07-25T23:00+05:30",
         "pm25": 38.3,
