@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-07-28T03:43:20.409Z",
-    "next_update_at": "2026-07-28T04:43:20.409Z",
+    "generated_at": "2026-07-28T07:05:34.935Z",
+    "next_update_at": "2026-07-28T08:05:34.935Z",
     "sources": [
       "WAQI",
       "Open-Meteo"
@@ -26,42 +26,42 @@
       {
         "id": "pm25",
         "display_name": "PM2.5",
-        "value": 22.7,
+        "value": 12.9,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "pm10",
         "display_name": "PM10",
-        "value": 25.1,
+        "value": 13.6,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "no2",
         "display_name": "NO₂",
-        "value": 7.4,
+        "value": 1.8,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "so2",
         "display_name": "SO₂",
-        "value": 10.1,
+        "value": 5.6,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "co",
         "display_name": "CO",
-        "value": 0.28,
+        "value": 0.22,
         "unit": "mg/m³",
         "category": "Good"
       },
       {
         "id": "o3",
         "display_name": "O₃",
-        "value": 108,
+        "value": 140,
         "unit": "µg/m³",
         "category": "Moderate"
       }
@@ -69,33 +69,6 @@
   },
   "forecast": {
     "hourly": [
-      {
-        "time": "2026-07-28T09:00+05:30",
-        "pm25": 19.4,
-        "pm10": 21.3,
-        "no2": 5,
-        "o3": 121,
-        "so2": 8.9,
-        "co": 0.27
-      },
-      {
-        "time": "2026-07-28T10:00+05:30",
-        "pm25": 16.2,
-        "pm10": 17.2,
-        "no2": 3.5,
-        "o3": 130,
-        "so2": 7.4,
-        "co": 0.25
-      },
-      {
-        "time": "2026-07-28T11:00+05:30",
-        "pm25": 14,
-        "pm10": 14.8,
-        "no2": 2.5,
-        "o3": 136,
-        "so2": 6.2,
-        "co": 0.24
-      },
       {
         "time": "2026-07-28T12:00+05:30",
         "pm25": 12.9,
@@ -338,6 +311,33 @@
         "o3": 143,
         "so2": 7.1,
         "co": 0.23
+      },
+      {
+        "time": "2026-07-29T15:00+05:30",
+        "pm25": 11.6,
+        "pm10": 11.8,
+        "no2": 4,
+        "o3": 138,
+        "so2": 7.4,
+        "co": 0.24
+      },
+      {
+        "time": "2026-07-29T16:00+05:30",
+        "pm25": 13.1,
+        "pm10": 13.3,
+        "no2": 6.3,
+        "o3": 129,
+        "so2": 8,
+        "co": 0.26
+      },
+      {
+        "time": "2026-07-29T17:00+05:30",
+        "pm25": 15.1,
+        "pm10": 15.3,
+        "no2": 8.4,
+        "o3": 119,
+        "so2": 8.5,
+        "co": 0.28
       }
     ]
   }
