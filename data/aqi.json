@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-09-02T15:12:07.934Z",
-    "next_update_at": "2026-09-02T16:12:07.934Z",
+    "generated_at": "2026-09-02T18:48:13.597Z",
+    "next_update_at": "2026-09-02T19:48:13.597Z",
     "sources": [
       "WAQI",
       "Open-Meteo"
@@ -26,28 +26,28 @@
       {
         "id": "pm25",
         "display_name": "PM2.5",
-        "value": 12.2,
+        "value": 11.8,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "pm10",
         "display_name": "PM10",
-        "value": 12.2,
+        "value": 11.8,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "no2",
         "display_name": "NO₂",
-        "value": 13.2,
+        "value": 13.9,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "so2",
         "display_name": "SO₂",
-        "value": 11.9,
+        "value": 13.2,
         "unit": "µg/m³",
         "category": "Good"
       },
@@ -61,7 +61,7 @@
       {
         "id": "o3",
         "display_name": "O₃",
-        "value": 80,
+        "value": 69,
         "unit": "µg/m³",
         "category": "Satisfactory"
       }
@@ -69,42 +69,6 @@
   },
   "forecast": {
     "hourly": [
-      {
-        "time": "2026-09-02T20:00+05:30",
-        "pm25": 12.2,
-        "pm10": 12.2,
-        "no2": 13.2,
-        "o3": 80,
-        "so2": 11.9,
-        "co": 0.27
-      },
-      {
-        "time": "2026-09-02T21:00+05:30",
-        "pm25": 12.2,
-        "pm10": 12.2,
-        "no2": 13.7,
-        "o3": 76,
-        "so2": 12.4,
-        "co": 0.27
-      },
-      {
-        "time": "2026-09-02T22:00+05:30",
-        "pm25": 12.3,
-        "pm10": 12.4,
-        "no2": 14,
-        "o3": 72,
-        "so2": 12.8,
-        "co": 0.27
-      },
-      {
-        "time": "2026-09-02T23:00+05:30",
-        "pm25": 11.8,
-        "pm10": 11.8,
-        "no2": 13.9,
-        "o3": 69,
-        "so2": 13.2,
-        "co": 0.27
-      },
       {
         "time": "2026-09-03T00:00+05:30",
         "pm25": 11.1,
