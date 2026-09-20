@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-09-20T14:16:45.031Z",
-    "next_update_at": "2026-09-20T15:16:45.031Z",
+    "generated_at": "2026-09-20T17:31:45.471Z",
+    "next_update_at": "2026-09-20T18:31:45.471Z",
     "sources": [
       "WAQI",
       "Open-Meteo"
@@ -26,28 +26,28 @@
       {
         "id": "pm25",
         "display_name": "PM2.5",
-        "value": 30.5,
+        "value": 27.9,
         "unit": "µg/m³",
-        "category": "Satisfactory"
+        "category": "Good"
       },
       {
         "id": "pm10",
         "display_name": "PM10",
-        "value": 30.6,
+        "value": 27.9,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "no2",
         "display_name": "NO₂",
-        "value": 11.3,
+        "value": 12.8,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "so2",
         "display_name": "SO₂",
-        "value": 10.1,
+        "value": 10.9,
         "unit": "µg/m³",
         "category": "Good"
       },
@@ -61,50 +61,14 @@
       {
         "id": "o3",
         "display_name": "O₃",
-        "value": 105,
+        "value": 83,
         "unit": "µg/m³",
-        "category": "Moderate"
+        "category": "Satisfactory"
       }
     ]
   },
   "forecast": {
     "hourly": [
-      {
-        "time": "2026-09-20T19:00+05:30",
-        "pm25": 30.5,
-        "pm10": 30.6,
-        "no2": 11.3,
-        "o3": 105,
-        "so2": 10.1,
-        "co": 0.58
-      },
-      {
-        "time": "2026-09-20T20:00+05:30",
-        "pm25": 28.9,
-        "pm10": 28.9,
-        "no2": 11.5,
-        "o3": 97,
-        "so2": 10.6,
-        "co": 0.62
-      },
-      {
-        "time": "2026-09-20T21:00+05:30",
-        "pm25": 28.2,
-        "pm10": 28.3,
-        "no2": 12.1,
-        "o3": 89,
-        "so2": 10.8,
-        "co": 0.61
-      },
-      {
-        "time": "2026-09-20T22:00+05:30",
-        "pm25": 27.9,
-        "pm10": 27.9,
-        "no2": 12.8,
-        "o3": 83,
-        "so2": 10.9,
-        "co": 0.58
-      },
       {
         "time": "2026-09-20T23:00+05:30",
         "pm25": 27.8,
