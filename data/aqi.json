@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-10-04T09:57:17.415Z",
-    "next_update_at": "2026-10-04T10:57:17.415Z",
+    "generated_at": "2026-10-04T15:25:40.708Z",
+    "next_update_at": "2026-10-04T16:25:40.708Z",
     "sources": [
       "WAQI",
       "Open-Meteo"
@@ -26,94 +26,49 @@
       {
         "id": "pm25",
         "display_name": "PM2.5",
-        "value": 36.4,
+        "value": 68.7,
         "unit": "µg/m³",
-        "category": "Satisfactory"
+        "category": "Moderate"
       },
       {
         "id": "pm10",
         "display_name": "PM10",
-        "value": 78.9,
+        "value": 97.6,
         "unit": "µg/m³",
         "category": "Satisfactory"
       },
       {
         "id": "no2",
         "display_name": "NO₂",
-        "value": 2.3,
+        "value": 37.1,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "so2",
         "display_name": "SO₂",
-        "value": 10.5,
+        "value": 23.4,
         "unit": "µg/m³",
         "category": "Good"
       },
       {
         "id": "co",
         "display_name": "CO",
-        "value": 0.25,
+        "value": 0.55,
         "unit": "mg/m³",
         "category": "Good"
       },
       {
         "id": "o3",
         "display_name": "O₃",
-        "value": 160,
+        "value": 58,
         "unit": "µg/m³",
-        "category": "Moderate"
+        "category": "Satisfactory"
       }
     ]
   },
   "forecast": {
     "hourly": [
-      {
-        "time": "2026-10-04T15:00+05:30",
-        "pm25": 37.3,
-        "pm10": 72.2,
-        "no2": 5.7,
-        "o3": 144,
-        "so2": 10.5,
-        "co": 0.28
-      },
-      {
-        "time": "2026-10-04T16:00+05:30",
-        "pm25": 40,
-        "pm10": 67.3,
-        "no2": 10.6,
-        "o3": 123,
-        "so2": 11,
-        "co": 0.33
-      },
-      {
-        "time": "2026-10-04T17:00+05:30",
-        "pm25": 45.4,
-        "pm10": 71.5,
-        "no2": 16.3,
-        "o3": 103,
-        "so2": 12.4,
-        "co": 0.39
-      },
-      {
-        "time": "2026-10-04T18:00+05:30",
-        "pm25": 54,
-        "pm10": 81,
-        "no2": 22.8,
-        "o3": 87,
-        "so2": 15.6,
-        "co": 0.44
-      },
-      {
-        "time": "2026-10-04T19:00+05:30",
-        "pm25": 61.7,
-        "pm10": 89.4,
-        "no2": 30,
-        "o3": 72,
-        "so2": 19.7,
-        "co": 0.5
-      },
       {
         "time": "2026-10-04T20:00+05:30",
         "pm25": 68.7,
@@ -338,6 +293,33 @@
         "o3": 115,
         "so2": 14.9,
         "co": 0.58
+      },
+      {
+        "time": "2026-10-05T21:00+05:30",
+        "pm25": 60.1,
+        "pm10": 68.9,
+        "no2": 15.5,
+        "o3": 106,
+        "so2": 15.4,
+        "co": 0.59
+      },
+      {
+        "time": "2026-10-05T22:00+05:30",
+        "pm25": 61.7,
+        "pm10": 70.8,
+        "no2": 15.5,
+        "o3": 99,
+        "so2": 15.6,
+        "co": 0.58
+      },
+      {
+        "time": "2026-10-05T23:00+05:30",
+        "pm25": 63.1,
+        "pm10": 72.2,
+        "no2": 15.3,
+        "o3": 93,
+        "so2": 15.8,
+        "co": 0.57
       }
     ]
   }
